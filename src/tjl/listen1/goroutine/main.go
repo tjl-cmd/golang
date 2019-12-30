@@ -15,6 +15,7 @@ func calc() {
 
 func main() {
 	go calc()
+	//calc()
 	fmt.Println("i exited")
 	time.Sleep(11 * time.Second)
 }
