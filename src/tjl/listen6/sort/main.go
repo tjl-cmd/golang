@@ -28,11 +28,25 @@ func select_sort(a [8]int) [8]int {
 	}
 	return a
 }
+
+//冒泡排序
+func bubble_sort(a [8]int) [8]int {
+	for i := 0; i < len(a); i++ {
+		for j := 0; j < len(a)-i-1; j++ {
+			if a[j] > a[j+1] {
+				a[j], a[j+1] = a[j+1], a[j]
+			}
+		}
+	}
+	return a
+}
 func main() {
 	var i [8]int = [8]int{1, 2, 4, 5, 7, 8, 3, 6}
-	j := insert_sort(i)
-	k := select_sort(i)
-	fmt.Println(k)
-	fmt.Println(i)
-	fmt.Println(j)
+	b := bubble_sort(i)
+	fmt.Println(b)
+	//j := insert_sort(i)
+	//k := select_sort(i)
+	//fmt.Println(k)
+	//fmt.Println(i)
+	//fmt.Println(j)
 }
